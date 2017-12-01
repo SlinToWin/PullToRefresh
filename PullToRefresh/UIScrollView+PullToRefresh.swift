@@ -124,9 +124,8 @@ extension UIScrollView {
     var normalizedContentOffset: CGPoint {
         get {
             let contentOffset = self.contentOffset
-            let contentInset = self.effectiveContentInset
             
-            let output = CGPoint(x: contentOffset.x + contentInset.left, y: contentOffset.y + contentInset.top)
+            let output = CGPoint(x: contentOffset.x + self.contentInset.left, y: contentOffset.y + self.contentInset.top)
             return output
         }
     }
